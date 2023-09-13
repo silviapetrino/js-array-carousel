@@ -7,6 +7,8 @@
 // 5. aggiungo/tolgo la classe hide al click del bottone 
 // 6. aggiungo/tolgo la classe hide al click del bottone 
 
+// 7. aggiungo secondo carosello  
+
 
 const containerSlider = document.querySelector(".images");
 
@@ -78,10 +80,8 @@ buttonBottom.addEventListener("click", function (){
 )
 
 
-
 buttonTop.addEventListener("click", function (){
 
-  
   for(i = 0; i < thumbCollection.length; i++) {
       
     thumbCollection[counter - 1].classList.add("active");
@@ -101,7 +101,6 @@ buttonTop.addEventListener("click", function (){
   }
 
   imagesCollection[counter].classList.remove("hide");
-
 
 
   

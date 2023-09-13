@@ -31,11 +31,11 @@
 }
 
 .btn_sp {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   position: absolute;
-  left: 47%;
-  transform: translateY( 50%,  50%);
+  left: 90%;
+  transform: translateY( 50%, 50%);
   background-color: rgba(238, 232, 232, 0.8);
 }
 
@@ -46,11 +46,11 @@
 }
 
  .btn_sp.button-top {
-    bottom: 85%;
+    bottom: 90%;
   }
 
   .btn_sp.button-bottom {
-    top: 85%;
+    top: 90%;
   }
 
 
