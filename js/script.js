@@ -6,20 +6,18 @@ debugger;
 const containerSlider = document.querySelector(".images");
 
 const images = [
- '../img/01.webp',
- "../img/02.webp",
- "../img/03.webp",
- "../img/04.webp",
- "../img/05.webp",
+ './img/01.webp',
+ "./img/02.webp",
+ "./img/03.webp",
+ "./img/04.webp",
+ "./img/05.webp",
 ]
-
 
 
 const buttonTop = document.querySelector(".button-top");
 const buttonBottom = document.querySelector(".button-bottom");
 
 buttonTop.classList.add("hide");
-
 
 
 // 3 creo un contatore 
@@ -35,15 +33,14 @@ for(i = 0; i < images.length; i++) {
 
 }
 
-// 4. salvo le immagini in un array
-//  perché ad ogni passaggio la classe hide andrà tolta dall'immagine, inserisco una classe item all'immagine
+// 4. salvo le immagini in un array nuovo
+  // perché ad ogni passaggio la classe hide andrà tolta dall'immagine, +inserisco una classe item all'immagine
 
 let imagesCollection = document.getElementsByClassName("item");
 
  imagesCollection[counter].classList.remove("hide");
 
 // 5. aggiungo/tolgo la classe hide al click del bottone 
-
 
 
 
@@ -55,10 +52,10 @@ buttonBottom.addEventListener("click", function (){
 
   counter++;
 
+  if (counter === imagesCollection.length - 1) buttonBottom.classList.add("hide")
+
   imagesCollection[counter].classList.remove("hide");
 
-  if (counter === imagesCollection.lenght - 1) buttonBottom.classList.add("hide")
-  
 }
 
 )
@@ -68,11 +65,19 @@ buttonBottom.addEventListener("click", function (){
 
 buttonTop.addEventListener("click", function (){
 
+
   imagesCollection[counter].classList.add("hide");
 
   counter--;
+  
+  if (counter === 0) {
+    buttonTop.classList.add("hide");
+    buttonBottom.classList.remove("hide");
+  }
 
   imagesCollection[counter].classList.remove("hide");
-  
+
+
+
   
 })
