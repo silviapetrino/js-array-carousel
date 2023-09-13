@@ -4,6 +4,10 @@ debugger;
 
 
 const containerSlider = document.querySelector(".images");
+const secondSlider = document.querySelector(".second-carousel");
+const secondSliderImg = document.querySelector(".second-carousel img");
+
+
 
 const images = [
  './img/01.webp',
@@ -31,6 +35,8 @@ for(i = 0; i < images.length; i++) {
 
   containerSlider.innerHTML += `<img src=${image} class="w-100 h-100 object-fit-cover img-fluid item hide">`
 
+  secondSlider.innerHTML += `<img src=${image} class="w-100 object-fit-cover h-20 thumb">`
+
 }
 
 // 4. salvo le immagini in un array nuovo
@@ -38,7 +44,13 @@ for(i = 0; i < images.length; i++) {
 
 let imagesCollection = document.getElementsByClassName("item");
 
+let thumbCollection = document.getElementsByClassName("thumb")
+
  imagesCollection[counter].classList.remove("hide");
+
+ thumbCollection[counter].classList.add("active");
+
+
 
 // 5. aggiungo/tolgo la classe hide al click del bottone 
 
