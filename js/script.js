@@ -31,7 +31,7 @@ let counter = 0;
 for(i = 0; i < images.length; i++) {
   let image = images[i];
 
-  containerSlider.innerHTML += `<img src=${image} class="w-100 h-100 object-fit-contain img-fluid item hide">`
+  containerSlider.innerHTML += `<img src=${image} class="w-100 h-100 object-fit-cover img-fluid item hide">`
 
 }
 
