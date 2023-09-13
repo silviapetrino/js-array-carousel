@@ -60,6 +60,7 @@ buttonBottom.addEventListener("click", function (){
   if (counter === imagesCollection.lenght - 1) buttonBottom.classList.add("hide")
   
 }
+
 )
 
 
