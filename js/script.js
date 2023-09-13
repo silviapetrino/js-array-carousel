@@ -1,12 +1,16 @@
 // 1. prendo i miei elementi per renderli dinamici: immagini e bottoni
+// 2. creo un ciclo che ad ogni interazione mostri un'immagine
+// 3 creo un contatore 
+// 4. salvo le immagini in un array nuovo
+  // perché ad ogni passaggio la classe hide andrà tolta dall'immagine, +inserisco una classe item all'immagine
 
-debugger;
+// 5. aggiungo/tolgo la classe hide al click del bottone 
+// 6. aggiungo/tolgo la classe hide al click del bottone 
 
 
 const containerSlider = document.querySelector(".images");
 
 const secondSlider = document.querySelector(".second-carousel");
-
 
 
 const images = [
@@ -18,20 +22,13 @@ const images = [
 ]
 
 
-
 const buttonTop = document.querySelector(".button-top");
 const buttonBottom = document.querySelector(".button-bottom");
 
 buttonTop.classList.add("hide");
 
-
-// 3 creo un contatore 
-
 let counter = 0;
 
-
-
-// 2. creo un ciclo che ad ogni interazione mostri un'immagine
 
 for(i = 0; i < images.length; i++) {
   let image = images[i];
@@ -41,8 +38,6 @@ for(i = 0; i < images.length; i++) {
 
 }
 
-// 4. salvo le immagini in un array nuovo
-  // perché ad ogni passaggio la classe hide andrà tolta dall'immagine, +inserisco una classe item all'immagine
 
 let imagesCollection = document.getElementsByClassName("item");
 
@@ -50,11 +45,9 @@ let imagesCollection = document.getElementsByClassName("item");
 
 
 
-
-// 5. aggiungo/tolgo la classe hide al click del bottone 
-
 let thumbCollection = document.getElementsByClassName("thumb")
 thumbCollection[counter].classList.add("active");
+
 
 
 buttonBottom.addEventListener("click", function (){
@@ -85,7 +78,6 @@ buttonBottom.addEventListener("click", function (){
 )
 
 
-// 6. aggiungo/tolgo la classe hide al click del bottone 
 
 buttonTop.addEventListener("click", function (){
 
