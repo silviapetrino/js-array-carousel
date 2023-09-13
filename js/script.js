@@ -2,6 +2,9 @@
 
 debugger;
 
+
+const containerSlider = document.querySelector(".images");
+
 const images = [
  '../img/01.webp',
  "../img/02.webp",
@@ -10,14 +13,16 @@ const images = [
  "../img/05.webp",
 ]
 
-console.log(images);
 
-const containerSlider = document.querySelector(".images");
-
-containerSlider.innerHTML = " ";
 
 const buttonTop = document.querySelector(".button-top");
 const buttonBottom = document.querySelector(".button-bottom");
+
+  //  i bottoni di default sono nascosti 
+  
+buttonBottom.classList.add("hide");
+buttonTop.classList.add("hide");
+
 
 // 3 creo un contatore 
 
