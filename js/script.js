@@ -18,10 +18,8 @@ const images = [
 const buttonTop = document.querySelector(".button-top");
 const buttonBottom = document.querySelector(".button-bottom");
 
-  //  i bottoni di default sono nascosti 
-  
-buttonBottom.classList.add("hide");
 buttonTop.classList.add("hide");
+
 
 
 // 3 creo un contatore 
@@ -40,32 +38,40 @@ for(i = 0; i < images.length; i++) {
 // 4. salvo le immagini in un array
 //  perché ad ogni passaggio la classe hide andrà tolta dall'immagine, inserisco una classe item all'immagine
 
-const imagesCollection = document.getElementsByClassName("item");
+let imagesCollection = document.getElementsByClassName("item");
 
-imagesCollection[counter].classList.remove("hide");
+ imagesCollection[counter].classList.remove("hide");
 
 // 5. aggiungo/tolgo la classe hide al click del bottone 
 
+
+
+
 buttonBottom.addEventListener("click", function (){
-  
+
+  buttonTop.classList.remove("hide");
+
   imagesCollection[counter].classList.add("hide");
 
   counter++;
 
   imagesCollection[counter].classList.remove("hide");
 
+  if (counter === imagesCollection.lenght - 1) buttonBottom.classList.add("hide")
   
-})
+}
+)
+
 
 // 6. aggiungo/tolgo la classe hide al click del bottone 
 
 buttonTop.addEventListener("click", function (){
-  
+
   imagesCollection[counter].classList.add("hide");
 
-  counter++;
+  counter--;
 
   imagesCollection[counter].classList.remove("hide");
-
+  
   
 })
