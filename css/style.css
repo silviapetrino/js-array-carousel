@@ -1,6 +1,4 @@
 
-
-
 .main {
   height: 100vh;
 }
@@ -18,8 +16,8 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  left: 50%;
-  transform: translateY(- 50%,  - 50%);
+  left: 47%;
+  transform: translateY( 50%,  50%);
   background-color: rgba(238, 232, 232, 0.8);
 }
 
@@ -35,4 +33,9 @@
 
   .btn_sp.button-bottom {
     top: 90%;
+  }
+
+
+  .hide {
+    display: none;
   }
