@@ -1,0 +1,18 @@
+
+
+
+.main {
+  height: 100vh;
+}
+
+.container {
+  background-color: rgb(189, 36, 36);
+  height: 60%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.slider {
+  background-color: orange;
+}
+
