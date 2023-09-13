@@ -64,6 +64,8 @@ buttonBottom.addEventListener("click", function (){
 
   counter++;
 
+  thumbCollection[counter].classList.add("active");
+
   if (counter === imagesCollection.length - 1) buttonBottom.classList.add("hide")
 
   imagesCollection[counter].classList.remove("hide");
