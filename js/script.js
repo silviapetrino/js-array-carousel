@@ -4,8 +4,8 @@ debugger;
 
 
 const containerSlider = document.querySelector(".images");
+
 const secondSlider = document.querySelector(".second-carousel");
-const secondSliderImg = document.querySelector(".second-carousel img");
 
 
 
@@ -18,6 +18,7 @@ const images = [
 ]
 
 
+
 const buttonTop = document.querySelector(".button-top");
 const buttonBottom = document.querySelector(".button-bottom");
 
@@ -28,13 +29,14 @@ buttonTop.classList.add("hide");
 
 let counter = 0;
 
+
+
 // 2. creo un ciclo che ad ogni interazione mostri un'immagine
 
 for(i = 0; i < images.length; i++) {
   let image = images[i];
-
+  
   containerSlider.innerHTML += `<img src=${image} class="w-100 h-100 object-fit-cover img-fluid item hide">`
-
   secondSlider.innerHTML += `<img src=${image} class="w-100 object-fit-cover h-20 thumb">`
 
 }
@@ -44,19 +46,26 @@ for(i = 0; i < images.length; i++) {
 
 let imagesCollection = document.getElementsByClassName("item");
 
-let thumbCollection = document.getElementsByClassName("thumb")
-
  imagesCollection[counter].classList.remove("hide");
 
- thumbCollection[counter].classList.add("active");
 
 
 
 // 5. aggiungo/tolgo la classe hide al click del bottone 
 
+let thumbCollection = document.getElementsByClassName("thumb")
+thumbCollection[counter].classList.add("active");
 
 
 buttonBottom.addEventListener("click", function (){
+
+  for(i = 0; i < thumbCollection.length; i++) {
+      
+    thumbCollection[counter + 1].classList.add("active");
+
+    thumbCollection[i].classList.remove("active");
+
+  }
 
   buttonTop.classList.remove("hide");
 
@@ -70,6 +79,7 @@ buttonBottom.addEventListener("click", function (){
 
   imagesCollection[counter].classList.remove("hide");
 
+
 }
 
 )
@@ -78,6 +88,15 @@ buttonBottom.addEventListener("click", function (){
 // 6. aggiungo/tolgo la classe hide al click del bottone 
 
 buttonTop.addEventListener("click", function (){
+
+  
+  for(i = 0; i < thumbCollection.length; i++) {
+      
+    thumbCollection[counter - 1].classList.add("active");
+
+    thumbCollection[i].classList.remove("active");
+
+  }
 
 
   imagesCollection[counter].classList.add("hide");
@@ -95,3 +114,6 @@ buttonTop.addEventListener("click", function (){
 
   
 })
+
+
+
