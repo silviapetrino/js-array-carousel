@@ -1,5 +1,7 @@
 // 1. prendo i miei elementi per renderli dinamici: immagini e bottoni
 
+debugger;
+
 const images = [
  '../img/01.webp',
  "../img/02.webp",
@@ -14,12 +16,10 @@ const containerSlider = document.querySelector(".images");
 
 containerSlider.innerHTML = " ";
 
-const buttonTop = document.querySelector("button-top");
-const buttonBottom = document.querySelector("button-bottom");
+const buttonTop = document.querySelector(".button-top");
+const buttonBottom = document.querySelector(".button-bottom");
 
-// 3 creo un contatore perché ad ogni passaggio la classe hide andrà tolta dall'immagine, inserisco una classe item all'immagine
-
-
+// 3 creo un contatore 
 
 let counter = 0;
 
@@ -29,14 +29,38 @@ for(i = 0; i < images.length; i++) {
   let image = images[i];
 
   containerSlider.innerHTML += `<img src=${image} class="w-100 h-100 object-fit-contain img-fluid item hide">`
-  console.log(image);
-
 
 }
 
 // 4. salvo le immagini in un array
+//  perché ad ogni passaggio la classe hide andrà tolta dall'immagine, inserisco una classe item all'immagine
 
 const imagesCollection = document.getElementsByClassName("item");
-console.log(imagesCollection[0]);
 
 imagesCollection[counter].classList.remove("hide");
+
+// 5. aggiungo/tolgo la classe hide al click del bottone 
+
+buttonBottom.addEventListener("click", function (){
+  
+  imagesCollection[counter].classList.add("hide");
+
+  counter++;
+
+  imagesCollection[counter].classList.remove("hide");
+
+  
+})
+
+// 6. aggiungo/tolgo la classe hide al click del bottone 
+
+buttonTop.addEventListener("click", function (){
+  
+  imagesCollection[counter].classList.add("hide");
+
+  counter++;
+
+  imagesCollection[counter].classList.remove("hide");
+
+  
+})
