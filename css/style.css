@@ -18,9 +18,8 @@
 .second-carousel {
   position: absolute;
   top: 0;
-  left: 80%;
+  left: 75%;
 }
-
 
 .h-20 {
   height: 20%;
@@ -34,7 +33,7 @@
   width: 35px;
   height: 35px;
   position: absolute;
-  left: 90%;
+  left: 85%;
   transform: translateY( 50%, 50%);
   background-color: rgba(238, 232, 232, 0.8);
 }

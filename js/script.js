@@ -6,8 +6,7 @@
 
 // 5. aggiungo/tolgo la classe hide al click del bottone 
 // 6. aggiungo/tolgo la classe hide al click del bottone 
-
-// 7. aggiungo secondo carosello  
+// 7. aggiungo secondo carosello  con due ciclo for
 
 
 const containerSlider = document.querySelector(".images");
