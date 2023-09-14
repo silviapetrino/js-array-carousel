@@ -34,14 +34,17 @@ for(i = 0; i < images.length; i++) {
 }
 
 
-// 3. salvo le immagini in array aggiungendo nuove classi
+// 3. salvo le immagini in array dopo aver aggiunto le classi item e thumb
 
 let imagesCollection = document.getElementsByClassName("item");
 
+  //  rimuovo la classe hide dalla prima immagine 
  imagesCollection[counter].classList.remove("hide");
 
 
 let thumbCollection = document.getElementsByClassName("thumb")
+
+  //  aggiungo la classe active dalla prima immagine 
 thumbCollection[counter].classList.add("active");
 
 // 5. aggiungo/tolgo la classe hide/active alle immagini al click del bottone sotto
